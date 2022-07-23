@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Area de un poligono regular</title>
+    <meta charset=utf-8">
+    <script>
+
+        function volumenCilindro()
+        {
+            let alturaCilindro, volumen, radioCuadrado, numero_de_lados;
+
+            alturaCilindro = parseFloat (document.formulario.altura_cilindro.value);
+
+            radioCuadrado = parseFloat (document.formulario.radio_cuadrado.value);
+
+            volumen=Math.PI*alturaCilindro*radioCuadrado;
+
+            document.formulario.volumen.value = volumen;
+        }
+
+    </script>
 </head>
 <body>
+<form name="formulario">
+    <table>
+        <tr>
+            <td>
+                <label>Ingresa la altura del cilindro:</label>
+            </td>
+            <td>
+                <input name="altura_cilindro" type="number" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Ingresa el valor del radio al cuadrado:</label>
+            </td>
+            <td>
+                <input name="radio_cuadrado" type="number" />
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <input value="Procesar" type="button" onclick="volumenCilindro();" />
+                <input type="reset" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Valor del volumen del cilindro es:</label>
+            </td>
+            <td>
+                <input name="volumen" type="number" />
+            </td>
+        </tr>
 
+    </table>
+</form>
 </body>
 </html>
