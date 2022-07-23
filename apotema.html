@@ -1,66 +1,66 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Área y perímetro de un polígono regular</title>
+    <title>Área de un polígono regular</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script>
 
-function algoritmo()
-{
-    let apotema, area, longitud_de_lado, numero_de_lados, perimetro;
-    apotema = parseFloat (document.formulario.apotema.value);
-    longitud_de_lado = parseFloat (document.formulario.longitud_de_lado.value);
-    numero_de_lados = parseFloat (document.formulario.numero_de_lados.value);
-    perimetro=numero_de_lados*longitud_de_lado;
-    area=apotema*apotema*numero_de_lados*Math.tan(Math.PI/numero_de_lados);
-    document.formulario.area.value = area;
-}
+        function algoritmo()
+        {
+            let apotema, area, longitud_de_lado, numero_de_lados, perimetro;
+            apotema = parseFloat (document.formulario.apotema.value);
+            longitud_de_lado = parseFloat (document.formulario.longitud_de_lado.value);
+            numero_de_lados = parseFloat (document.formulario.numero_de_lados.value);
+            perimetro=numero_de_lados*longitud_de_lado;
+            area=apotema*apotema*numero_de_lados*Math.tan(Math.PI/numero_de_lados);
+            document.formulario.area.value = area;
+        }
 
-        </script>
+    </script>
 </head>
 <body>
-<form name="formulario">
-    <table>
-        <tr>
-            <td>
-                <label for="apotema">Ingresa el valor de apotema:</label>
-            </td>
-            <td>
-                <input name="apotema" type="number" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="longitud_de_lado">Ingresa el valor de longitud de lado:</label>
-            </td>
-            <td>
-                <input name="longitud_de_lado" type="number" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="numero_de_lados">Ingresa el valor de numero de lados:</label>
-            </td>
-            <td>
-                <input name="numero_de_lados" type="number" />
-            </td>
-        </tr>
-        <tr align="center">
-            <td>
-                <input value="Procesar" type="button" onclick="algoritmo();" />
-                <input type="reset" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="area">Valor de area:</label>
-            </td>
-            <td>
-                <input name="area" type="number" />
-            </td>
-        </tr>
+    <form name="formulario">
+        <table>
+            <tr>
+                <td>
+                    <label for="apotema">Ingresa el valor de apotema:</label>
+                </td>
+                <td>
+                    <input name="apotema" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="longitud_de_lado">Ingresa el valor de longitud de lado:</label>
+                </td>
+                <td>
+                    <input name="longitud_de_lado" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="numero_de_lados">Ingresa el valor de numero de lados:</label>
+                </td>
+                <td>
+                    <input name="numero_de_lados" type="number" />
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <input value="Procesar" type="button" onclick="algoritmo();" />
+                    <input type="reset" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="area">Valor de area:</label>
+                </td>
+                <td>
+                    <input name="area" type="number" />
+                </td>
+            </tr>
 
-    </table>
-</form>
+        </table>
+    </form>
 </body>
 </html>
